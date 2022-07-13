@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 import com.airbnb.lottie.LottieAnimationView
 import com.yuvraj.cab_booking_app.R
 import com.yuvraj.cab_booking_app.databinding.FragmentSelectLocationBinding
@@ -19,5 +20,12 @@ class SelectLocationFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_select_location, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.nextCvSlf.setOnClickListener {
+            findNavController().navigate(R.id.action_selectLocationFragment_to_dateAndTimeFragment)
+        }
     }
 }
