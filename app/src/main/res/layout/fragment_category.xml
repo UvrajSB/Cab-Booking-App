@@ -1,288 +1,309 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.CategoryFragment"
-    android:background="@color/white">
+    xmlns:tools="http://schemas.android.com/tools">
 
-<androidx.cardview.widget.CardView
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    app:cardBackgroundColor="@color/black"
-    android:layout_marginHorizontal="40dp"
-    app:cardCornerRadius="25dp"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    android:layout_marginBottom="60dp"
-    android:id="@+id/next_cv_cf"
-    app:cardElevation="150dp">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Next"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:fontFamily="@font/changa_bold"
-        android:textSize="20sp"/>
-</androidx.cardview.widget.CardView>
 
-<ImageView
-    android:alpha="1"
-    android:layout_marginLeft="140dp"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_constraintEnd_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    android:src="@drawable/category_wallpaper"
-    android:scaleType="centerCrop"/>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="50dp"
-        android:rotation="45"
-        android:alpha="0.5"
-        app:cardBackgroundColor="#FFC107"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/cardView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/cardView"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" >
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/hatch_back"
-            android:rotation="-45"/>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:alpha="0.5"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="100dp"
-        android:rotation="45"
-        app:cardBackgroundColor="#FFC107"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/suv_icon"
-            android:rotation="-45"/>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="50dp"
-        android:rotation="45"
-
-        app:cardBackgroundColor="#FFC107"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/cardView2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/cardView2"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2" >
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/sedan"
-            android:rotation="-45"/>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="50dp"
-        android:rotation="45"
-        app:cardBackgroundColor="#FFC107"
-        app:cardCornerRadius="10dp"
-        android:alpha="0.5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/cardView3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/cardView3"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3"
-        app:layout_constraintVertical_bias="0.0" >
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/auto"
-            android:rotation="-45"/>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView9"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/cardView8"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/cardView8"
-        app:layout_constraintTop_toBottomOf="@+id/cardView8">
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sedan"
-                android:gravity="center"
-                android:paddingTop="10dp"
-                android:textSize="25sp"
-                android:fontFamily="@font/changa_bold"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Rates : 25Rs/km"
-                android:lineSpacingMultiplier="0.5"
-                android:gravity="center"
-                android:paddingTop="10dp"
-                android:textSize="18sp"
-                android:fontFamily="@font/changa_regular"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:alpha="0.75"
-        android:layout_marginTop="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/cardView9"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/cardView9"
-        app:layout_constraintTop_toBottomOf="@+id/cardView9"
-        app:layout_constraintVertical_bias="0.0" >
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Rikshaw"
-                android:gravity="center"
-                android:paddingTop="10dp"
-                android:textSize="25sp"
-                android:fontFamily="@font/changa_bold"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Rates : 5Rs/km"
-                android:lineSpacingMultiplier="0.5"
-                android:gravity="center"
-                android:paddingTop="10dp"
-                android:textSize="18sp"
-                android:fontFamily="@font/changa_regular"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_marginTop="90dp"
-        android:id="@+id/cardView7"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:alpha="0.75"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/cardView"
-        app:layout_constraintTop_toTopOf="parent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
+        android:layout_height="match_parent"
+        tools:context=".fragments.CategoryFragment"
+        android:background="@color/white">
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="SUV"
-            android:gravity="center"
-            android:paddingTop="10dp"
-            android:textSize="25sp"
-            android:fontFamily="@font/changa_bold"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="@color/black"
+            android:layout_marginHorizontal="40dp"
+            app:cardCornerRadius="25dp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Rates : 30Rs/km"
-            android:lineSpacingMultiplier="0.5"
-            android:gravity="center"
-            android:paddingTop="10dp"
-            android:textSize="18sp"
-            android:fontFamily="@font/changa_regular"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="60dp"
+            android:id="@+id/next_cv_cf"
+            app:cardElevation="150dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Next"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/changa_bold"
+                android:textSize="20sp" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:alpha="1"
+            android:layout_marginLeft="140dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@drawable/category_wallpaper"
+            android:scaleType="centerCrop" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="50dp"
+            android:rotation="45"
+            android:alpha="0.5"
+            app:cardBackgroundColor="#FFC107"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/cardView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/hatch_back"
+                android:rotation="-45" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:alpha="0.5"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="100dp"
+            android:rotation="45"
+            app:cardBackgroundColor="#FFC107"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/suv_icon"
+                android:rotation="-45" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="50dp"
+            android:rotation="45"
+
+            app:cardBackgroundColor="#FFC107"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/cardView2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cardView2"
+            app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/sedan"
+                android:rotation="-45" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="50dp"
+            android:rotation="45"
+            app:cardBackgroundColor="#FFC107"
+            app:cardCornerRadius="10dp"
+            android:alpha="0.5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/cardView3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cardView3"
+            app:layout_constraintTop_toBottomOf="@+id/cardView3"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/auto"
+                android:rotation="-45" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView9"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="@+id/cardView8"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cardView8"
+            app:layout_constraintTop_toBottomOf="@+id/cardView8">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sedan"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/changa_bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rates : 25Rs/km"
+                    android:lineSpacingMultiplier="0.5"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/changa_regular"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:alpha="0.75"
+            android:layout_marginTop="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/cardView9"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cardView9"
+            app:layout_constraintTop_toBottomOf="@+id/cardView9"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rikshaw"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/changa_bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rates : 5Rs/km"
+                    android:lineSpacingMultiplier="0.5"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/changa_regular"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="90dp"
+            android:id="@+id/cardView7"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:alpha="0.75"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SUV"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/changa_bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rates : 30Rs/km"
+                    android:lineSpacingMultiplier="0.5"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/changa_regular"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView8"
+            android:layout_marginTop="30dp"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:alpha="0.75"
+            app:layout_constraintEnd_toEndOf="@+id/cardView7"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cardView7"
+            app:layout_constraintTop_toBottomOf="@+id/cardView7">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hatch Back"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/changa_bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rates : 20Rs/km"
+                    android:lineSpacingMultiplier="0.5"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/changa_regular"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView8"
-        android:layout_marginTop="30dp"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:alpha="0.75"
-        app:layout_constraintEnd_toEndOf="@+id/cardView7"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/cardView7"
-        app:layout_constraintTop_toBottomOf="@+id/cardView7">
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Hatch Back"
-                android:gravity="center"
-                android:paddingTop="10dp"
-                android:textSize="25sp"
-                android:fontFamily="@font/changa_bold"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Rates : 20Rs/km"
-                android:lineSpacingMultiplier="0.5"
-                android:gravity="center"
-                android:paddingTop="10dp"
-                android:textSize="18sp"
-                android:fontFamily="@font/changa_regular"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

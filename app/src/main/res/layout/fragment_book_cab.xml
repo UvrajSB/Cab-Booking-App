@@ -1,124 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".fragments.BookCabFragment">
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
 
+    </data>
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/logout_btn_bcf">
-        <androidx.cardview.widget.CardView
-            android:id="@+id/my_bookings_btn_bcf"
-            android:layout_marginTop="20dp"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            app:cardCornerRadius="30dp"
-            app:layout_constraintLeft_toRightOf="@id/car_iv_bcf"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/book_now_btn_bcf"
-            android:layout_marginHorizontal="20dp"
-            app:cardElevation="50dp"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="My Bookings"
-                android:layout_gravity="center"
-                android:textSize="20sp"
-                android:fontFamily="@font/changa_bold"
-                android:textAlignment="center"
-                android:textColor="#FFC107"/>
-        </androidx.cardview.widget.CardView>
+        tools:context=".fragments.BookCabFragment">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    app:cardCornerRadius="5dp"
-                    app:cardElevation="50dp"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="20dp">
-                    <ImageView
-                        android:scaleType="centerCrop"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/logout_icon"/>
-                </androidx.cardview.widget.CardView>
 
-        <TextView
-            android:id="@+id/welcome_tv_bcf"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/changa_bold"
-            android:lineSpacingMultiplier="0.5"
-            android:paddingHorizontal="20dp"
-            android:text="@string/welcome_heading"
-            android:textSize="40sp"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/logo_iv_bcf" />
-
-        <TextView
-            android:id="@+id/para_tv_bcf"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/changa_regular"
-            android:lineSpacingMultiplier="0.5"
-            android:paddingHorizontal="20sp"
-            android:text="@string/service_intro_para"
-            android:textSize="14sp"
-            app:layout_constraintLeft_toRightOf="@id/car_iv_bcf"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/welcome_tv_bcf" />
-        <androidx.cardview.widget.CardView
-            android:id="@+id/book_now_btn_bcf"
-            android:layout_marginTop="40dp"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            app:cardCornerRadius="30dp"
-            app:layout_constraintLeft_toRightOf="@id/car_iv_bcf"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/para_tv_bcf"
-            android:layout_marginHorizontal="20dp"
-            app:cardElevation="50dp"
-            app:cardBackgroundColor="@color/black">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/_btn_txt"
-                android:layout_gravity="center"
-                android:textSize="20sp"
-                android:fontFamily="@font/changa_bold"
-                android:textAlignment="center"
-                android:textColor="#FFC107"/>
-        </androidx.cardview.widget.CardView>
-
-        <ImageView
-            android:id="@+id/car_iv_bcf"
-            android:layout_width="0dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/car_pic_welcome_pg"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/welcome_tv_bcf"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/logout_btn_bcf">
 
-        <ImageView
-            android:id="@+id/logo_iv_bcf"
-            android:layout_width="0dp"
-            android:layout_height="150dp"
-            android:src="@drawable/app_logo"
-            app:layout_constraintLeft_toRightOf="@id/car_iv_bcf"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/my_bookings_btn_bcf"
+                android:layout_marginTop="20dp"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:cardCornerRadius="30dp"
+                app:layout_constraintLeft_toRightOf="@id/car_iv_bcf"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/book_now_btn_bcf"
+                android:layout_marginHorizontal="20dp"
+                app:cardElevation="50dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Bookings"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/changa_bold"
+                    android:textAlignment="center"
+                    android:textColor="#FFC107" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="50dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp">
+
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logout_icon" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/welcome_tv_bcf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/changa_bold"
+                android:lineSpacingMultiplier="0.5"
+                android:paddingHorizontal="20dp"
+                android:text="@string/welcome_heading"
+                android:textSize="40sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/logo_iv_bcf" />
+
+            <TextView
+                android:id="@+id/para_tv_bcf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/changa_regular"
+                android:lineSpacingMultiplier="0.5"
+                android:paddingHorizontal="20sp"
+                android:text="@string/service_intro_para"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/car_iv_bcf"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/welcome_tv_bcf" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/book_now_btn_bcf"
+                android:layout_marginTop="40dp"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:cardCornerRadius="30dp"
+                app:layout_constraintLeft_toRightOf="@id/car_iv_bcf"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/para_tv_bcf"
+                android:layout_marginHorizontal="20dp"
+                app:cardElevation="50dp"
+                app:cardBackgroundColor="@color/black">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_btn_txt"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/changa_bold"
+                    android:textAlignment="center"
+                    android:textColor="#FFC107" />
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/car_iv_bcf"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/car_pic_welcome_pg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/welcome_tv_bcf"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/logo_iv_bcf"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:src="@drawable/app_logo"
+                app:layout_constraintLeft_toRightOf="@id/car_iv_bcf"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>
