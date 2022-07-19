@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.yuvraj.cab_booking_app.DataClasses.Car
 import com.yuvraj.cab_booking_app.R
 
+
 class SelectCarRVAdapter(val cars: List<Car>):
     RecyclerView.Adapter<SelectCarRVAdapter.SelectCarViewHolder>() {
 
