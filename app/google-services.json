@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "429810559337-lvqng5adcp2dn758sei6pk2k2a6pogf9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yuvraj.cab_booking_app",
+            "certificate_hash": "4b4773738b6bc9e548d440b2f4d8120855edfb0b"
+          }
+        },
+        {
           "client_id": "429810559337-01hpgk4ut3kn9471fdbqcjlkqr63kmjh.apps.googleusercontent.com",
           "client_type": 3
         }

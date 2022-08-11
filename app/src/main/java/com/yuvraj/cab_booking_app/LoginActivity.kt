@@ -1,12 +1,17 @@
 package com.yuvraj.cab_booking_app
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.SetOptions
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,11 +43,11 @@ class LoginActivity : AppCompatActivity() {
         val response = result.idpResponse
         if (result.resultCode == RESULT_OK) {
             // Successfully signed in
-            val user = FirebaseAuth.getInstance().currentUser
-            startActivity(Intent(this,MainActivity::class.java))
 
-        } else {
+
+        } else if(result.idpResponse!!.isNewUser) {
 
         }
+
     }
 }

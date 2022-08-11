@@ -42,6 +42,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/signout_cv_cbf"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:cardCornerRadius="5dp"

@@ -1,16 +1,22 @@
 package com.yuvraj.cab_booking_app.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import com.yuvraj.cab_booking_app.DataClasses.Car
 import com.yuvraj.cab_booking_app.R
 import com.yuvraj.cab_booking_app.adapters.SelectCarRVAdapter
 import com.yuvraj.cab_booking_app.databinding.FragmentSelectCarBinding
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class SelectCarFragment : Fragment() {
     lateinit var binding: FragmentSelectCarBinding
@@ -19,7 +25,6 @@ class SelectCarFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_select_car, container, false)
-
         var CarsList = mutableListOf<Car>(
             Car("Swift Dzire", "UP 75 Y 1254", "Rs 500 / day", R.drawable.urus),
             Car("Swift Dzire", "UP 75 Y 1254", "Rs 500 / day", R.drawable.urus),
@@ -31,7 +36,7 @@ class SelectCarFragment : Fragment() {
             Car("Swift Dzire", "UP 75 Y 1254", "Rs 500 / day", R.drawable.urus)
         )
 
-        val adapter = SelectCarRVAdapter(CarsList)
+        val adapter = SelectCarRVAdapter(CarsList as ArrayList<Car>)
         binding.rvScf.apply {
             this.adapter = adapter
             layoutManager = LinearLayoutManager(requireContext())
