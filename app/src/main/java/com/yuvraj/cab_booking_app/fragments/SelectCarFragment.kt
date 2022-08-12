@@ -20,27 +20,40 @@ import kotlinx.coroutines.launch
 
 class SelectCarFragment : Fragment() {
     lateinit var binding: FragmentSelectCarBinding
+    var CarsList = ArrayList<Car>()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_select_car, container, false)
-        var CarsList = mutableListOf<Car>(
-            Car("Swift Dzire", "UP 75 Y 1254", "Rs 500 / day", R.drawable.urus),
-            Car("Swift Dzire", "UP 75 Y 1254", "Rs 500 / day", R.drawable.urus),
-            Car("Swift Dzire", "UP 75 Y 1254", "Rs 500 / day", R.drawable.urus),
-            Car("Swift Dzire", "UP 75 Y 1254", "Rs 500 / day", R.drawable.urus),
-            Car("Swift Dzire", "UP 75 Y 1254", "Rs 500 / day", R.drawable.urus),
-            Car("Swift Dzire", "UP 75 Y 1254", "Rs 500 / day", R.drawable.urus),
-            Car("Swift Dzire", "UP 75 Y 1254", "Rs 500 / day", R.drawable.urus),
-            Car("Swift Dzire", "UP 75 Y 1254", "Rs 500 / day", R.drawable.urus)
-        )
-
-        val adapter = SelectCarRVAdapter(CarsList as ArrayList<Car>)
-        binding.rvScf.apply {
-            this.adapter = adapter
-            layoutManager = LinearLayoutManager(requireContext())
-        }
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val db = Firebase.firestore
+        db.collection("Vehicles").document("VehicleInfo").collection("SUV").get()
+            .addOnSuccessListener { SUVs ->
+
+                var newCar: Car
+                CarsList.clear()
+                for (SUV in SUVs){
+                    Log.d("Show names of My SUVs", SUV.getString("CarName").toString())
+                    newCar = Car(SUV.getString("CarName"),SUV.getString("CarNum"), SUV.getString("CarRate"), SUV.getString("CarImage"))
+                    for (i in 1..5) {
+                        CarsList.add(newCar)
+                    }
+                    val adapter = SelectCarRVAdapter(CarsList as ArrayList<Car>)
+                    binding.rvScf.apply {
+                        this.adapter = adapter
+                        layoutManager = LinearLayoutManager(requireContext())
+                    }
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.d("SelectCarList", "get failed with ", exception)
+            }
+
     }
 }

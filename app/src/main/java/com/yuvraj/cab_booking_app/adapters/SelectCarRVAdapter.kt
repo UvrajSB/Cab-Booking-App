@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.yuvraj.cab_booking_app.DataClasses.Car
 import com.yuvraj.cab_booking_app.R
 
@@ -22,7 +23,10 @@ class SelectCarRVAdapter(val cars: ArrayList<Car>):
 
     override fun onBindViewHolder(holder: SelectCarViewHolder, position: Int) {
         holder.itemView.apply {
-          findViewById<ImageView>(R.id.car_iv_sci).setImageResource(cars[position].carImageRes)
+          findViewById<ImageView>(R.id.car_iv_sci).load(cars[position].carImageRes) {
+              crossfade(true)
+              placeholder(R.drawable.place_holder)
+          }
             findViewById<TextView>(R.id.car_name_tv_sci).text = cars[position].carName
             findViewById<TextView>(R.id.car_num_tv_sci).text = cars[position].carNum
             findViewById<TextView>(R.id.rate_tv_sci).text = cars[position].carRate
