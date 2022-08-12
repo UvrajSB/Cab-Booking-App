@@ -69,6 +69,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
+                    android:id="@+id/pick_location_etv_slf"
                     android:layout_height="wrap_content"
                     android:lineSpacingMultiplier="0.75"
                     android:hint="Pick me up from"
@@ -87,6 +88,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
+                    android:id="@+id/drop_etv_slf"
                     android:layout_height="wrap_content"
                     android:lineSpacingMultiplier="0.75"
                     android:hint="Drop me at"
